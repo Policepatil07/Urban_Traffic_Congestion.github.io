@@ -1,0 +1,81 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.tree import DecisionTreeClassifier
+import streamlit as st
+import plotly.express as px
+
+
+df = pd.read_csv("traffic_data.csv")
+df.head()
+
+df["vehicle_count"] = df["vehicle_count"]
+df["timestamp"] = pd.to_datetime(df["timestamp"])
+df["hour"] = df["timestamp"].dt.hour
+df["day"] = df["timestamp"].dt.day_name()
+df.drop_duplicates(inplace=True)
+df["weather"] = df["weather"].str.strip()
+
+df["traffic_intensity"] = df["vehicle_count"] / df["avg_speed"]
+df["peak_hour"] = df["hour"].apply(lambda x: 1 if x in [8,9,17,18] else 0)
+df["weather_encoded"] = df["weather"].map({"Clear":0, "Fog":1, "Rain":2})
+df["risk"] = df["accident_occurred"]
+
+
+hourly_traffic = df.groupby("hour")["vehicle_count"].mean()
+
+plt.plot(hourly_traffic)
+plt.title("Traffic Volume by Hour")
+plt.xlabel("Hour")
+plt.ylabel("Vehicle Count")
+plt.show()
+
+
+sns.barplot(x="location", y="vehicle_count", data=df)
+plt.xticks(rotation=45)
+plt.title("Congestion by Location")
+plt.show()
+
+
+pivot = df.pivot_table(values="accident_occurred",
+                       index="location",
+                       columns="weather",
+                       aggfunc="mean")
+
+sns.heatmap(pivot, annot=True, cmap="Reds")
+plt.title("Accident Risk by Location & Weather")
+plt.show()
+
+
+features = ["vehicle_count", "avg_speed", "hour", "weather_encoded"]
+
+X = df[features]
+y = df["risk"]
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, shuffle=False)
+
+model = DecisionTreeClassifier(max_depth=5)
+model.fit(X_train, y_train)
+pred = model.predict(X_test)
+print("Accuracy:", accuracy_score(y_test, pred))
+
+df["risk_score"] = model.predict_proba(X)[:,1]
+
+
+st.title("🚦 Smart Traffic Dashboard")
+
+location = st.selectbox("Select Location", df["location"].unique())
+filtered = df[df["location"] == location]
+
+st.metric("Avg Traffic", filtered["vehicle_count"].mean())
+st.metric("Accident Rate", filtered["accident_occurred"].mean())
+
+hourly = filtered.groupby("hour")["vehicle_count"].mean().reset_index()
+
+fig1 = px.line(hourly, x="hour", y="vehicle_count", title="Traffic vs Time")
+st.plotly_chart(fig1)
+
+fig2 = px.bar(filtered, x="weather", y="vehicle_count", color="weather")
+st.plotly_chart(fig2)
