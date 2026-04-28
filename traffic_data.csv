@@ -1,0 +1,73 @@
+timestamp,location,vehicle_count,avg_speed,weather,accident_occurred
+1/1/2024 0:00,MG Road,320,45,Clear,0
+1/1/2024 1:00,Whitefield,210,30,Rain,1
+1/1/2024 2:00,Indiranagar,150,50,Clear,0
+1/1/2024 3:00,Electronic City,180,40,Fog,0
+1/1/2024 4:00,Yelahanka,90,60,Clear,0
+1/1/2024 5:00,MG Road,200,35,Rain,1
+1/1/2024 6:00,Whitefield,400,25,Clear,0
+1/1/2024 7:00,Indiranagar,450,20,Clear,1
+1/1/2024 8:00,Electronic City,480,18,Clear,0
+1/1/2024 9:00,Yelahanka,300,30,Fog,0
+1/1/2024 10:00,MG Road,350,28,Clear,0
+1/1/2024 11:00,Whitefield,370,26,Rain,1
+1/1/2024 12:00,Indiranagar,420,22,Clear,0
+1/1/2024 13:00,Electronic City,390,24,Clear,0
+1/1/2024 14:00,Yelahanka,310,32,Clear,0
+1/1/2024 15:00,MG Road,360,27,Fog,0
+1/1/2024 16:00,Whitefield,410,23,Clear,1
+1/1/2024 17:00,Indiranagar,470,19,Clear,0
+1/1/2024 18:00,Electronic City,500,17,Rain,1
+1/1/2024 19:00,Yelahanka,330,29,Clear,0
+1/1/2024 20:00,MG Road,280,34,Clear,0
+1/1/2024 21:00,Whitefield,260,36,Fog,0
+1/1/2024 22:00,Indiranagar,240,38,Clear,0
+1/1/2024 23:00,Electronic City,220,40,Clear,0
+1/2/2024 0:00,Yelahanka,100,55,Clear,0
+1/2/2024 1:00,MG Road,120,50,Fog,0
+1/2/2024 2:00,Whitefield,140,48,Clear,0
+1/2/2024 3:00,Indiranagar,160,45,Clear,0
+1/2/2024 4:00,Electronic City,110,52,Rain,0
+1/2/2024 5:00,Yelahanka,130,47,Clear,0
+1/2/2024 6:00,MG Road,420,22,Clear,1
+1/2/2024 7:00,Whitefield,460,19,Clear,0
+1/2/2024 8:00,Indiranagar,480,18,Rain,1
+1/2/2024 9:00,Electronic City,390,24,Clear,0
+1/2/2024 10:00,Yelahanka,310,30,Clear,0
+1/2/2024 11:00,MG Road,340,28,Fog,0
+1/2/2024 12:00,Whitefield,370,26,Clear,0
+1/2/2024 13:00,Indiranagar,410,23,Clear,0
+1/2/2024 14:00,Electronic City,380,25,Rain,1
+1/2/2024 15:00,Yelahanka,300,31,Clear,0
+1/2/2024 16:00,MG Road,360,27,Clear,0
+1/2/2024 17:00,Whitefield,440,21,Clear,1
+1/2/2024 18:00,Indiranagar,490,18,Fog,0
+1/2/2024 19:00,Electronic City,350,29,Clear,0
+1/2/2024 20:00,Yelahanka,280,33,Clear,0
+1/2/2024 21:00,MG Road,260,35,Rain,0
+1/2/2024 22:00,Whitefield,240,37,Clear,0
+1/2/2024 23:00,Indiranagar,220,39,Clear,0
+1/3/2024 0:00,Electronic City,100,55,Clear,0
+1/3/2024 1:00,Yelahanka,120,50,Clear,0
+1/3/2024 2:00,MG Road,140,48,Fog,0
+1/3/2024 3:00,Whitefield,160,45,Clear,0
+1/3/2024 4:00,Indiranagar,110,52,Clear,0
+1/3/2024 5:00,Electronic City,130,47,Rain,0
+1/3/2024 6:00,Yelahanka,420,22,Clear,1
+1/3/2024 7:00,MG Road,460,19,Clear,0
+1/3/2024 8:00,Whitefield,480,18,Clear,1
+1/3/2024 9:00,Indiranagar,390,24,Clear,0
+1/3/2024 10:00,Electronic City,310,30,Fog,0
+1/3/2024 11:00,Yelahanka,340,28,Clear,0
+1/3/2024 12:00,MG Road,370,26,Rain,1
+1/3/2024 13:00,Whitefield,410,23,Clear,0
+1/3/2024 14:00,Indiranagar,380,25,Clear,0
+1/3/2024 15:00,Electronic City,300,31,Clear,0
+1/3/2024 16:00,Yelahanka,360,27,Clear,0
+1/3/2024 17:00,MG Road,440,21,Clear,1
+1/3/2024 18:00,Whitefield,490,18,Rain,1
+1/3/2024 19:00,Indiranagar,350,29,Clear,0
+1/3/2024 20:00,Electronic City,280,33,Clear,0
+1/3/2024 21:00,Yelahanka,260,35,Fog,0
+1/3/2024 22:00,MG Road,240,37,Clear,0
+1/3/2024 23:00,Whitefield,220,39,Clear,0
